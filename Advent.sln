@@ -7,6 +7,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{977AFA0F-48F
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Advent", "src\Advent\Advent.fsproj", "{E03397A5-87B5-4F90-BD06-E23C515164B5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1EB0B0DD-9C43-4065-9DF3-73BCB1E4A860}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "AdventTests", "test\AdventTests\AdventTests.fsproj", "{DE31D74A-8050-4000-B6F0-0BD319E819FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,8 +36,21 @@ Global
 		{E03397A5-87B5-4F90-BD06-E23C515164B5}.Release|x64.Build.0 = Release|Any CPU
 		{E03397A5-87B5-4F90-BD06-E23C515164B5}.Release|x86.ActiveCfg = Release|Any CPU
 		{E03397A5-87B5-4F90-BD06-E23C515164B5}.Release|x86.Build.0 = Release|Any CPU
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC}.Debug|x64.Build.0 = Debug|Any CPU
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC}.Debug|x86.Build.0 = Debug|Any CPU
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC}.Release|x64.ActiveCfg = Release|Any CPU
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC}.Release|x64.Build.0 = Release|Any CPU
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC}.Release|x86.ActiveCfg = Release|Any CPU
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{E03397A5-87B5-4F90-BD06-E23C515164B5} = {977AFA0F-48F0-4A84-9338-92A31C6CC788}
+		{DE31D74A-8050-4000-B6F0-0BD319E819FC} = {1EB0B0DD-9C43-4065-9DF3-73BCB1E4A860}
 	EndGlobalSection
 EndGlobal
