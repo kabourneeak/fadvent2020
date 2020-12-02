@@ -10,6 +10,6 @@ module Part1Tests =
 
     [<Test>]
     let Test1 () =
-        let ep = findExpense [1721; 979; 366; 299; 675; 1456]
+        let ep = findExpense 2020 [1721; 979; 366; 299; 675; 1456]
         Assert.AreEqual(1721, ep.Left)
         Assert.AreEqual(299, ep.Right)
