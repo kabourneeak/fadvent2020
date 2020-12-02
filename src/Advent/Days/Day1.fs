@@ -6,29 +6,44 @@ module Day1 =
     let getExpenses =
         getLines "./inputs/day1part1.txt"
         |> Seq.map int
+        |> Seq.toList
 
-    type ExpensePair = {
-        Left : int
-        Right : int
-    }
+    let findExpensePair target allExpenses =
+        let expenses = Set.ofSeq allExpenses
 
-    let findExpense allExpenses =
-        let expenses =
-            Set.ofSeq allExpenses
+        Seq.filter (fun l -> expenses.Contains(target - l)) allExpenses
+        |> Seq.map (fun l -> (l, target - l))
+        |> Seq.tryHead
 
-        let pairs =
-            Seq.map (fun x -> { Left = x; Right = 2020 - x}) allExpenses
+    let findExpenseTriplet target allExpenses =
+        let rec findExpenseTripletRec expenses =
+            match expenses with
+            | []
+            | [ _ ]
+            | [ _; _ ] -> None
+            | h :: t ->
+                match findExpensePair (target - h) t with
+                | Some (a, b) -> Some((h, a, b))
+                | None -> findExpenseTripletRec t
 
-        let matches =
-            Seq.filter (fun ep -> expenses.Contains(ep.Right)) pairs
+        findExpenseTripletRec allExpenses
 
-        Seq.head matches
-    
-    let Part1 =
-        let ep =
-            findExpense getExpenses
+    let part1 =
+        let result = findExpensePair 2020 getExpenses
 
-        printf $"Day 1 Part 1 Answer: {ep.Left} x {ep.Right} = {ep.Left * ep.Right}\n"
-        ()
+        let answerText =
+            match result with
+            | Some (a, b) -> $"{a} x {b} = {a * b}"
+            | None -> "No Solution Found"
 
-    let Part2 = ()
+        printf $"Day 1 Part 1 Answer: {answerText}\n"
+
+    let part2 =
+        let result = findExpenseTriplet 2020 getExpenses
+
+        let answerText =
+            match result with
+            | Some (a, b, c) -> $"{a} x {b} x {c} = {a * b * c}"
+            | None -> "No Solution Found"
+
+        printf $"Day 1 Part 2 Answer: {answerText}\n"
