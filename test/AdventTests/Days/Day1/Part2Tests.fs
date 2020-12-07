@@ -3,14 +3,20 @@ namespace AdventTests.Days.Day1
 module Part2Tests =
 
     open NUnit.Framework
+    open FsUnit
     open Days.Day1
 
     [<SetUp>]
     let Setup () = ()
-
+    
     [<Test>]
-    let Test1 () =
-        let (a, b, c) = findExpenseTriplet 2020 [1721; 979; 366; 299; 675; 1456]
-        Assert.AreEqual(979,a)
-        Assert.AreEqual(366, b)
-        Assert.AreEqual(675, c)
+    let ``findExpenseTriplet should solve example`` () =
+        // arrange
+        let target = 2020
+        let expenseReport = [ 1721; 979; 366; 299; 675; 1456 ]
+
+        // act
+        let result = findExpenseTriplet target expenseReport
+
+        // assert
+        result |> should equal (979, 366, 675)

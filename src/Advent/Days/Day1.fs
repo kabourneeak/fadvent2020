@@ -12,7 +12,7 @@ module Day1 =
         Right : int
     }
 
-    let findExpense target allExpenses =
+    let findExpensePair target allExpenses =
         let expenses =
             Set.ofSeq allExpenses
 
@@ -38,7 +38,7 @@ module Day1 =
     
     let Part1 =
         let ep =
-            findExpense 2020 getExpenses
+            findExpensePair 2020 getExpenses
 
         printf $"Day 1 Part 1 Answer: {ep.Left} x {ep.Right} = {ep.Left * ep.Right}\n"
         ()
