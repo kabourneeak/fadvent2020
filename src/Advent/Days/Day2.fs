@@ -33,6 +33,16 @@ module Day2 =
 
         charCount >= model.Min && charCount <= model.Max
 
+    let matchesPasswordPositionPolicy model =
+        let firstPositionChar =
+            model.Password.[model.Min - 1]
+
+        let secondPositionChar =
+            model.Password.[model.Max - 1]
+
+        (model.Char = firstPositionChar || model.Char = secondPositionChar) 
+        && not (model.Char = firstPositionChar && model.Char = secondPositionChar)
+
     let Part1 =
         let validCount = 
             getPasswords
@@ -42,4 +52,11 @@ module Day2 =
         printf $"Day 2 Part 1 Answer: There are {validCount} valid passwords\n"
         ()
 
-    let Part2 = ()
+    let Part2 = 
+        let validCount = 
+            getPasswords
+            |> Seq.filter matchesPasswordPositionPolicy
+            |> Seq.length
+
+        printf $"Day 2 Part 2 Answer: There are {validCount} valid passwords\n"
+        ()
