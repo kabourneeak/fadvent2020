@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>    
+    <TargetFramework>net5.0</TargetFramework>
     <LangVersion>preview</LangVersion>
   </PropertyGroup>
   <ItemGroup>
@@ -15,5 +15,7 @@
   <ItemGroup>
     <Compile Include="Days/Day1/Part1Tests.fs" />
     <Compile Include="Days/Day1/Part2Tests.fs" />
-  </ItemGroup>  
+    <Compile Include="Days/Day2/Day2Tests.fs" />
+    
+  </ItemGroup>
 </Project>
