@@ -12,19 +12,8 @@ module Day4 =
 
     let passportFactory passportLines =
 
-        let rec splitByEmptyLine lines =
-            let nextEmptyLineIndex =
-                lines |> List.tryFindIndex (fun x -> x = "")
-
-            match nextEmptyLineIndex with
-            | Some i ->
-                let (passport, restOfLines) = List.splitAt i lines
-
-                (List.singleton passport, splitByEmptyLine (List.tail restOfLines))
-                ||> List.append
-            | None -> List.singleton lines
-
-        splitByEmptyLine passportLines
+        passportLines
+        |> splitWhen (fun x -> x = "")
         |> Seq.map
             (fun lines ->
                 lines

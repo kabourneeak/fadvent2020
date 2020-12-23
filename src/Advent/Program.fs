@@ -20,4 +20,7 @@ let main argv =
     Day5.part1()
     Day5.part2()
 
+    Day6.part1()
+    Day6.part2()
+
     0 // return an integer exit code
