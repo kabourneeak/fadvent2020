@@ -1,4 +1,4 @@
-namespace AdventTests.Days.Day2
+namespace AdventTests.Days
 
 module Day2Tests =
 
