@@ -13,11 +13,10 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Days/Day1/Part1Tests.fs" />
-    <Compile Include="Days/Day1/Part2Tests.fs" />
-    <Compile Include="Days/Day2/Day2Tests.fs" />
-    <Compile Include="Days/Day3/Day3Tests.fs" />
-    <Compile Include="Days/Day4/Day4Tests.fs" />
+    <Compile Include="Days/Day1Tests.fs" />
+    <Compile Include="Days/Day2Tests.fs" />
+    <Compile Include="Days/Day3Tests.fs" />
+    <Compile Include="Days/Day4Tests.fs" />
     
   </ItemGroup>
 </Project>
