@@ -1,15 +1,13 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
-
   <ItemGroup>
-    <Compile Include="FileUtils.fs" />
+    <Compile Include="Utils/FileUtils.fs" />
     <Compile Include="Days/Day1.fs" />
     <Compile Include="Days/Day2.fs" />
+    <Compile Include="Days/Day3.fs" />
     <Compile Include="Program.fs" />
   </ItemGroup>
-
 </Project>
