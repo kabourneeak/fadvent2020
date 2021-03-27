@@ -12,9 +12,8 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.9.1" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Days/Day1/Part1Tests.fs" />
-    <Compile Include="Days/Day1/Part2Tests.fs" />
-    <Compile Include="Days/Day2/Part1Tests.fs" />
-    <Compile Include="Days/Day2/Part2Tests.fs" />
+    <Compile Include="Days/Day1Tests.fs" />
+    <Compile Include="Days/Day2Tests.fs" />
+    <Compile Include="Days/Day3Tests.fs" />
   </ItemGroup>
 </Project>
